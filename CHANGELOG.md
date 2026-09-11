@@ -6,6 +6,18 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 本文件记录本项目所有值得注意的改动。格式参考 Keep a Changelog,版本号遵循语义化版本。
 
+## [0.1.2] - 2026-09-11
+
+### Added / 新增
+
+- Real product screenshots and a 35-second demo GIF recorded against a running
+  DSH web UI (`assets/screenshots/`), plus the full MP4 (`assets/videos/`). /
+  在真实 DSH Web 界面上录制的产品截图与 35 秒演示 GIF（`assets/screenshots/`），
+  以及完整 MP4（`assets/videos/`）。
+- `screenshots.json` at the repository root declaring the screenshots for the
+  plugin storefront, and shipped in the npm package. / 仓库根新增
+  `screenshots.json` 供插件商店展示，并随 npm 包一起发布。
+
 ## [0.1.1] - 2026-09-11
 
 ### Fixed / 修复

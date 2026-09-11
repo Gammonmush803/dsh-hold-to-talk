@@ -19,6 +19,17 @@
 
 [English](#english) · [中文说明](#中文说明)
 
+## Demo / 演示
+
+![hold-to-talk demo](assets/screenshots/demo.gif)
+
+*按住鼠标说话 → 浮层里边说边出字 → 松手把文字写进输入框（35 秒实录，[完整视频](assets/videos/voice-input.mp4)）*
+
+| 1. Hold on the input box / 长按进入录音 | 2. Release, text lands in the draft / 松手写入草稿 | 3. Plugin card / 插件卡片 |
+| --- | --- | --- |
+| ![overlay](assets/screenshots/1-hold-to-talk-overlay.png) | ![inserted](assets/screenshots/2-transcript-inserted.png) | ![card](assets/screenshots/3-plugin-card.png) |
+| The overlay appears with "release to send · slide up to cancel" / 浮层出现，提示"松开发送 · 上滑取消" | The transcript is appended to the composer; the live preview stayed in the overlay / 识别文字写入输入框（边说边出字的预览只留在浮层里） | Listed in the plugin list after install / 安装后在插件列表可见 |
+
 ---
 
 ## English
