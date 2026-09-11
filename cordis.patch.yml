@@ -1,0 +1,35 @@
+# dsh-hold-to-talk bundle patch layer.
+# 安装本包到 web profile 后,host 端加载主入口(长按语音输入:HTTP 路由 + 本地
+# SenseVoice 识别引擎 + 设置命名空间)。浏览器半身由 dsh.client 声明,随页面加载。
+#
+# 下面 config 里的每一项都对应 host 侧 settings schema 的同名扁平字段;用户层
+# (设置面板写 settings.yaml)优先级高于这里的 base 值。
+- insert:
+    - id: dsh-hold-to-talk
+      name: dsh-hold-to-talk
+      config:
+        enabled: true
+        # 长按判定:按住不动超过该毫秒数才进入录音(期间移动/选区/松手都算普通编辑)
+        holdThresholdMs: 400
+        # 按住后指针上移超过该像素数,进入"松开取消"态
+        cancelSlidePx: 60
+        # 边说边出字的间隔:每积累这么久的音频就重解码一次滑动窗口
+        # (实测原生引擎解 6 秒窗口约 0.9 秒,1.5 秒一轮留有余量)
+        interimIntervalMs: 1500
+        # 短于该时长的录音直接丢弃(防误触)
+        minHoldMs: 250
+        # 单次长按最长时长,到点自动定稿
+        maxHoldMs: 60000
+        # 实时预览解码的滑动窗口上限(秒);松手定稿始终用完整音频
+        maxWindowSec: 6
+        # 定稿后是否自动发送;默认 false = 只写进输入框,由你自己按发送
+        autoSend: false
+        # SenseVoice 语言:auto / zh / en / ja / ko / yue
+        language: auto
+        # 逆文本规整(把"二零二六年"变成"2026年"这类)
+        useItn: true
+        numThreads: 2
+        # 模型下载镜像(国内默认走 hf-mirror)
+        mirror: https://hf-mirror.com
+        # 模型缓存目录;留空 = ~/.dsh/hold-to-talk/models
+        modelDir: ""

@@ -1,0 +1,86 @@
+{
+  "name": "dsh-hold-to-talk",
+  "version": "0.1.1",
+  "description": "Hold-to-talk voice input for the DeepSeek Harness Web composer: hold the mouse on the input box, speak, see the running transcript float above it, release to insert the text into the draft. Recognition runs locally (SenseVoice via sherpa-onnx) — no API key, offline, audio never leaves the machine. 微信电脑版同款长按语音输入:在输入框上按住鼠标说话,浮层里边说边出字,松手把文字写进输入框,上滑取消;识别在本机跑,免密钥、离线、音频不出本机。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "dependencies": {
+    "sherpa-onnx-node": "^1.13.8"
+  },
+  "optionalDependencies": {
+    "sherpa-onnx": "^1.13.8"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": ">=3.18.0 <4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "engines": {
+    "node": "^22.0.0 || >=24"
+  },
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/client.js && node --check lib/model-cache.js && node --check lib/asr-worker.mjs",
+    "test": "npm run check && node tools/client-smoke.mjs && node tools/host-test.mjs && node tools/client-test.mjs",
+    "test:ci": "npm run check && node tools/client-smoke.mjs",
+    "test:host": "node tools/host-test.mjs",
+    "test:client": "node tools/client-smoke.mjs && node tools/client-test.mjs",
+    "model:fetch": "node tools/fetch-model.mjs",
+    "test:decode": "node tools/decode-test.mjs tools/zh.wav",
+    "bench": "node tools/bench.mjs tools/zh.wav"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "plugin",
+    "voice",
+    "voice-input",
+    "speech-to-text",
+    "asr",
+    "sensevoice",
+    "sherpa-onnx",
+    "push-to-talk",
+    "hold-to-talk",
+    "wechat",
+    "dictation"
+  ],
+  "author": "wangzhanchao883",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangzhanchao883/dsh-hold-to-talk.git"
+  },
+  "homepage": "https://github.com/wangzhanchao883/dsh-hold-to-talk",
+  "bugs": {
+    "url": "https://github.com/wangzhanchao883/dsh-hold-to-talk/issues"
+  }
+}
